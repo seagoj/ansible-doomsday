@@ -1,0 +1,5 @@
+---
+- hosts: doomsday
+  sudo: true
+  roles:
+    - doomsday
