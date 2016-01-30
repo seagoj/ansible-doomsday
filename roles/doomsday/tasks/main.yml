@@ -13,6 +13,7 @@
   apt:
     name: git
     state: latest
+    update_cache: yes
 
 - name: Upload deploy key
   no_log: True
