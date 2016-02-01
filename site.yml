@@ -3,3 +3,7 @@
   sudo: true
   roles:
     - doomsday
+
+- hosts: web
+  roles:
+    - web

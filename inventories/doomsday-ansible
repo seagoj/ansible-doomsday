@@ -1,2 +1,5 @@
 [doomsday]
 doomsday-ansible
+
+[web]
+doomsday-ansible
