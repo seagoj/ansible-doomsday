@@ -27,8 +27,8 @@
 # Change to new repo
 - name: Checkout latest commit
   git:
-    repo: "git@github.com:seagoj/amazon_api.git"
-    dest: "{{ document_root }}/amazon_api"
+    repo: "git@github.com:seagoj/doomsday-web.git"
+    dest: "{{ document_root }}"
     accept_hostkey: True
     key_file: /root/.ssh/deploy
 
@@ -43,10 +43,9 @@
     creates: /usr/local/bin/bundler
 
 - name: Install gems
-  command: bundle install
-  args:
+  bundler:
+    state: latest
     chdir: "{{ document_root }}"
-    creates: Gemfile.lock
 
 # - name: Prepare environment AWS_ACCESS_KEY_ID
 #   lineinfile:

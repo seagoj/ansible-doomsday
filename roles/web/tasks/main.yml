@@ -12,7 +12,7 @@
 
 - name: Install mysql auth
   apt:
-    name: libapache2-=mod-auth-mysql
+    name: libapache2-mod-auth-mysql
     state: latest
 
 - name: Install php mysql
